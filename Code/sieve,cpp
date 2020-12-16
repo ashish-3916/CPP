@@ -1,0 +1,22 @@
+void sieve( int n )
+{ //Time complexity : O(n*log(log(n)))
+    vector<int> primes;
+    bool check[n+1];
+    memset(check , 1 , sizeof(check));
+    
+    for(int i=2 ; i*i<=n ; ++i)
+    {  
+        if(check[i])
+        {  
+            primes.push_back(i);
+            for(int j = i*i ; j<= n ; j=j+i)
+                check[j]= false;
+        }
+
+    }
+
+    for(int i=0 ; i< primes.size() ; i++)
+        cout<<primes[i]<<endl;
+
+}
+
