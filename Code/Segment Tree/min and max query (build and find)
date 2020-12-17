@@ -3,6 +3,8 @@
 #define ll long long
 using namespace std;
 
+// better to declare arr[n+1] and segtree[4*n +4] globally depending on the constraint size
+//
 
 void buildTree(int seg[],int arr[], int si, int ss, int se) //building minimum seg tree
 {
@@ -50,7 +52,7 @@ int main() {
     {
         cin>>arr[i];// 1 5 9 -1 5 -3 8 
     }
-    int size=2*(n+1);
+    int size=4*(n+1);
     int seg[size];
     memset(seg,0,sizeof(seg));
    buildTree(seg,arr,1,1,n);// build segtree from starting index in range L to R ; 
