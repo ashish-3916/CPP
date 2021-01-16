@@ -1,0 +1,6 @@
+
+quick_select() - optimised way to do in avg of O(n) (quick sort)
+
+k th largest smallest in unsorted array in worst O(n) complexity 
+
+clrs section 10
