@@ -1,2 +1,4 @@
 https://leetcode.com/problems/unique-paths/discuss/1021818/general-soln-for-such-recursive-relation-or-used-in-other-questions-or-other-solutions
 ( multiset cofficients in dp ) ( a O(1) soln to many problems )
+
+whenever we need to reaarage elements such that relative order remains same . think of insertion sort
