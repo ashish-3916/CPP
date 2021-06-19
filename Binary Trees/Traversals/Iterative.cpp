@@ -37,8 +37,8 @@ vector<int> preorderTraversal(TreeNode* root) {
             if(lvl== 3 or node ==NULL) continue;
             s.push({node , lvl+1});
             
-            if(lvl==1)s.push({node->left,0});
-            else if(lvl == 0) ans.push_back(node->val);
+            if(lvl == 0) ans.push_back(node->val);
+            else if(lvl==1)s.push({node->left,0});
             else if(lvl==2)s.push({node->right, 0});
         
         }
@@ -61,9 +61,10 @@ vector<int> postorderTraversal(TreeNode* root) {
             s.push({node , lvl+1});
             
             if(lvl==0)s.push({node->left,0});
-            else if(lvl == 2) ans.push_back(node->val);
             else if(lvl==1)s.push({node->right, 0});
-        
+            else if(lvl == 2) ans.push_back(node->val);
+            
+    
         }
         return ans;
     }
